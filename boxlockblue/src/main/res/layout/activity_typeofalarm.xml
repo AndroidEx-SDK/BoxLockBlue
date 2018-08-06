@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.androidex.capbox.ui.widget.SecondTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:titleText="@string/setting_tv_mode" />
+
+    <LinearLayout
+        android:id="@+id/ll_lost"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/typeofalarm_ll_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/setting_tv_padding_left"
+            android:text="@string/typeofalarm_tv_lost"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <Button
+            android:id="@+id/btn_lost"
+            android:layout_width="@dimen/typeofalarm_btn_width"
+            android:layout_height="@dimen/typeofalarm_btn_height"
+            android:layout_marginRight="@dimen/setting_tv_marginRight"
+            android:background="@null"
+            android:text="@string/typeofalarm_tv_lost_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_line_height"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_distance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/typeofalarm_ll_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/setting_tv_padding_left"
+            android:text="@string/typeofalarm_tv_distance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <Button
+            android:id="@+id/btn_distance"
+            android:layout_width="@dimen/typeofalarm_btn_width"
+            android:layout_height="@dimen/typeofalarm_btn_height"
+            android:layout_marginRight="@dimen/setting_tv_marginRight"
+            android:background="@null"
+            android:text="@string/typeofalarm_tv_lost_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_line_height"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_temp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/typeofalarm_ll_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/TextView09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/setting_tv_padding_left"
+            android:text="@string/typeofalarm_tv_fever"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <Button
+            android:id="@+id/btn_temp"
+            android:layout_width="@dimen/typeofalarm_btn_width"
+            android:layout_height="@dimen/typeofalarm_btn_height"
+            android:layout_marginRight="@dimen/setting_tv_marginRight"
+            android:background="@null"
+            android:text="@string/typeofalarm_tv_lost_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_line_height"
+        android:background="@color/line_color" />
+
+
+</LinearLayout>

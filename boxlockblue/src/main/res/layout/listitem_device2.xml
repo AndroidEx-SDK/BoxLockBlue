@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hsv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rl_normal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/marginPadding20"
+            android:paddingBottom="@dimen/marginPadding20"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_marginLeft="@dimen/marginPadding16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_box_gray"/>
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginPadding16"
+                android:layout_marginRight="@dimen/marginPadding16"
+                android:text="Box"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_ble"
+                android:paddingLeft="@dimen/marginPadding8"
+                android:paddingRight="@dimen/marginPadding8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/starts_connect2_gray"/>
+
+            <ImageView
+                android:id="@+id/iv_lock"
+                android:paddingLeft="@dimen/marginPadding8"
+                android:paddingRight="@dimen/marginPadding8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/marginPadding16"
+                android:src="@mipmap/lock_close1_gray"/>
+
+        </LinearLayout>
+
+        <!-- 左侧滑操作后的显示出的操作按钮层 -->
+        <TextView
+            android:id="@+id/tv_unbind"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rl_normal"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="@string/adduser_btn_unbinding"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_below="@id/rl_normal"
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_line_height"
+            android:background="@color/line_color" />
+
+    </LinearLayout>
+
+
+</HorizontalScrollView>

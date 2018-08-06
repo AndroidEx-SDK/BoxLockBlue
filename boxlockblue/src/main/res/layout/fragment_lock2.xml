@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white1"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_lock_graph" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/marginPadding30"
+        android:layout_marginRight="@dimen/marginPadding30"
+        android:layout_marginTop="@dimen/marginPadding20"
+        android:background="@color/gray_4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginPadding10"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="温度" />
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="26.5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="湿度" />
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="80.1%" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="温度" />
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="26.5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="温度" />
+
+            <TextView
+                style="@style/fragment_lock_name"
+                android:text="26.5" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/marginPadding30"
+        android:layout_marginRight="@dimen/marginPadding30"
+        android:layout_marginTop="@dimen/marginPadding10"
+        android:background="@color/gray_4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginPadding30"
+        android:layout_marginTop="@dimen/marginPadding10">
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="开箱状态：" />
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="关闭" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginPadding30">
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="无线静默：" />
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="否" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginPadding30">
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="定位时间：" />
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="2018-03-29 17:00:06" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginPadding30">
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="定位位置：" />
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:layout_marginRight="@dimen/marginPadding8"
+            android:text="广东省" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/marginPadding30"
+        android:layout_marginRight="@dimen/marginPadding30"
+        android:layout_marginTop="@dimen/marginPadding10"
+        android:background="@color/gray_4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/marginPadding16">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/marginPadding12"
+            android:src="@mipmap/starts_connect2_blue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/marginPadding12"
+            android:src="@mipmap/lock_close1_gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/marginPadding12"
+            android:src="@mipmap/lock_close1_gray" />
+    </LinearLayout>
+</LinearLayout>

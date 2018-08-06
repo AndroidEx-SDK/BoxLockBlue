@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_titlebar_h"
+    android:background="@color/title_color">
+
+    <LinearLayout
+        android:id="@+id/left_icon"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="@dimen/marginPadding18"
+            android:layout_height="@dimen/marginPadding4"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="@dimen/marginPadding18"
+            android:layout_height="@dimen/marginPadding4"
+            android:layout_margin="@dimen/marginPadding5"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="@dimen/marginPadding18"
+            android:layout_height="@dimen/marginPadding4"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_marginRight="@dimen/marginPadding16"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="@dimen/marginPadding18"
+            android:layout_height="@dimen/marginPadding4"
+            android:layout_margin="@dimen/marginPadding5"
+            android:layout_centerVertical="true"
+            android:background="@color/white" />
+        <View
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/marginPadding4"
+            android:layout_height="@dimen/marginPadding18"
+            android:layout_margin="@dimen/marginPadding5"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/marginPadding20"
+        android:paddingRight="@dimen/marginPadding25"
+        android:src="@mipmap/list_pop"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginPadding16"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingLeft="@dimen/marginPadding10"
+        android:paddingRight="@dimen/marginPadding10"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

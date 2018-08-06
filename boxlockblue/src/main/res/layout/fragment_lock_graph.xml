@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginPadding8"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:text="温度：" />
+
+        <TextView
+            android:id="@+id/current_temp_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_min_temp2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/temp_page_maxmin_textsize" />
+
+        <TextView
+            style="@style/fragment_lock_name"
+            android:layout_marginLeft="@dimen/marginPadding16"
+            android:text="湿度：" />
+
+        <TextView
+            style="@style/fragment_lock_unit"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/main_min_hum2" />
+
+        <TextView
+            android:id="@+id/main_tv_maxtemp"
+            style="@style/fragment_lock_data"
+            android:text="@string/setting_tv_highesttemp" />
+
+        <TextView
+            android:id="@+id/main_tv_maxhum"
+            style="@style/fragment_lock_data"
+            android:layout_marginLeft="@dimen/marginPadding16"
+            android:text="@string/main_max_hum" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginPadding8"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/fragment_lock_data"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="0分钟" />
+
+        <TextView
+            android:id="@+id/main_tv_mintemp"
+            style="@style/fragment_lock_data"
+            android:text="@string/setting_tv_alowesttemp" />
+
+        <TextView
+            android:id="@+id/main_tv_minhum"
+            style="@style/fragment_lock_data"
+            android:layout_marginLeft="@dimen/marginPadding16"
+            android:text="@string/main_min_hum" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

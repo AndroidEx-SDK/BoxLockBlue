@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.androidex.capbox.ui.widget.SecondTitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:rightText="调试"
+        app:titleText="@string/setting" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_changeHead"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/marginPadding50"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/marginPadding16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="修改头像"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@mipmap/nextstep" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_line_height"
+                android:background="@color/line_color" />
+            <LinearLayout
+                android:id="@+id/ll_changePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/marginPadding50"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/marginPadding16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="修改密码"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="14.5dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@mipmap/nextstep" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_line_height"
+                android:background="@color/line_color" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_chat_right_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/marginPadding10"
+        android:layout_marginTop="@dimen/marginPadding10">
+
+        <com.androidex.capbox.ui.view.CircleImageView
+            android:id="@+id/item_chat_right_icon"
+            android:layout_width="@dimen/marginPadding48"
+            android:layout_height="@dimen/marginPadding48"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/marginPadding10"
+            android:src="@mipmap/default_head" />
+
+        <com.androidex.capbox.ui.view.AutoLinkTextView
+            android:id="@+id/item_chat_right_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/item_chat_right_icon"
+            android:background="@drawable/rc_ic_bubble_no_right"
+            app:MaxWidth="@dimen/marginPadding235" />
+    </RelativeLayout>
+</LinearLayout>

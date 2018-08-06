@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/dialogbg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="51.5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="清除缓存"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="确定清空本地的缓存数据？"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@mipmap/tvbg"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:minLines="2" />
+
+    <ImageView
+        android:layout_width="249dp"
+        android:layout_height="0.5dp"
+        android:background="@drawable/colustom"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61.5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="确定" />
+
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/line"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:layout_weight="1"
+            android:text="取消" />
+
+
+    </LinearLayout>
+</LinearLayout>

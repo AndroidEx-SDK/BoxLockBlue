@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidex.capbox"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission
+        android:name="com.androidex.boxlib.permission"
+        android:protectionLevel="signature"></permission>
+
+    <uses-permission android:name="com.androidex.boxlib.permission" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="fc51UqGugQUOwzhBuan3UHSZ1MUERHXz" />    <!--liyp-->
+        <!--android:value="GIDYV7mTuroWsLyMApmqSDVaBaCLdTb9" />-->  <!--xiaozd-->
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.androidex.capbox.ui.activity.FingerprintMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.AuthentiCationActivity" />
+        <activity
+            android:name=".ui.activity.CameraActivity"
+            android:screenOrientation="landscape" /> <!-- landscape -->
+        <activity
+            android:name=".ui.activity.SearchDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BoxDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WatchDetialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.acker.simplezxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+ 	    android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.Forget2Activtiy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingAlarmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingLockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingFingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FingerEnterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WatchListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BoxSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.androidex.capbox.ui.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.androidex.capbox.ui.activity.ModifiActivtiy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.androidex.capbox.ui.activity.DebugBLEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.androidex.capbox.ui.activity.TypeOfAlarmActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.MyBleService" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <!-- 用来发送 通知桌面部件更新 -->
+        <service
+            android:name=".service.WidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS">
+            <intent-filter>
+
+                <action android:name="android.appwidget.action.APP_WIDGET_SERVICE" />
+            </intent-filter>
+        </service>
+        <!--锁屏界面-->
+        <activity
+            android:name=".ui.activity.LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.androidex.capbox"
+            android:theme="@style/LockScreenBase" />
+        <activity android:name=".ui.activity.AddDeviceActivity"></activity>
+  <!--桌面插件-->
+        <receiver android:name=".provider.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.androidex.capbox.provider.ACTION_UPDATE_ALL" />
+                <action android:name="BLE_CONN_SUCCESS" />
+                <action android:name="BLE_CONN_SUCCESS_ALLCONNECTED" />
+                <action android:name="BLE_CONN_FAIL" />
+                <action android:name="BLE_CONN_DIS" />
+                <action android:name="BLUTOOTH_OFF" />
+                <action android:name="BLUTOOTH_ON" />
+                <action android:name="ACTION_LOCK_STARTS" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/provider_widget" />
+        </receiver>
+      
+ <!--7.0以上相册访问-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.androidex.capbox"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

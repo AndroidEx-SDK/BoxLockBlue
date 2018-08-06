@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+    }
+}
+android {
+    signingConfigs {
+        config {
+            keyAlias 'androidex'
+            keyPassword 'androidex'
+            storeFile file('D:/server/CapacityBoxlock/boxlock.jks')
+            storePassword 'AndroidEx28435491'
+        }
+    }
+    def getVersionCode = { ->
+        try {
+            def stdout = new ByteArrayOutputStream()
+            exec {
+                commandLine 'git', 'rev-list', '--all', '--count'
+                standardOutput = stdout
+            }
+            return Integer.parseInt(stdout.toString().trim()) + 400
+        }
+        catch (ignored) {
+            return -1
+        }
+    }
+
+    def getVersionName = { ->
+        try {
+            def stdout = new ByteArrayOutputStream()
+            exec {
+                commandLine 'git', 'describe', '--tags', '--dirty'
+                standardOutput = stdout
+            }
+            return stdout.toString().trim()
+        } catch (ignored) {
+            return null
+        }
+    }
+
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.androidex.capbox"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode getVersionCode()
+        versionName getVersionName()
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            // 显式声明支持注解
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "boxlockblue_" + buildType.name + "_v${defaultConfig.versionCode}.apk"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            debuggable false
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    //项目中使用了注解插件 比如butterknife   升级3.1之后打包编译  出现以下错误提示
+    //由于在内部类中使用了 注解    这样的内部类注解在打包编译的时候  是被忽略的 下面是解决方法
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+greendao {
+    schemaVersion 2
+    daoPackage "com.androidex.capbox.db"
+    targetGenDir "src/main/java"
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation(name: 'boxlib', ext: 'aar')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/fastjson-1.1.28.jar')
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'com.acker:simplezxing:1.5'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'io.github.lizhangqu:coreprogress:1.0.2'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    implementation 'no.nordicsemi.android:dfu:1.0.4'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation files('libs/BaiduLBS_Android.jar')
+}

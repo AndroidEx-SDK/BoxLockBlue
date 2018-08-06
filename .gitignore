@@ -1,0 +1,10 @@
+build
+.idea
+.gradle
+*.iml
+*.pro
+*.property
+*.apk
+BoxLockBlue/build
+local.properties
+gradle/
